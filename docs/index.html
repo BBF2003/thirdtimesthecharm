@@ -1,59 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>BBF2003</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - BBF2003 Studio Art</title>
   <style>
     body {
       background-color: #CCCCCC;
-      font-family: "Times New Roman", Arial, serif;
-      color: blue;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000;
       margin: 0;
       padding: 0;
-      display: flex;
+    }
+    a {
+      color: blue;
+      text-decoration: none;
     }
     nav {
-      width: 200px;
-      padding: 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #aaa;
     }
-    nav a {
+    .nav-container {
+      display: flex;
+      padding: 0.5rem 1rem;
+    }
+    .nav-item {
+      position: relative;
+      margin-right: 2rem;
+      list-style: none;
+    }
+    .nav-item > a {
+      padding: 0.5rem;
       display: block;
-      color: blue;
-      text-decoration: underline;
-      margin-bottom: 10px;
     }
-    main {
-      flex: 1;
-      padding: 20px;
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      min-width: 150px;
+      z-index: 1000;
     }
-    img {
+    .dropdown li {
+      margin: 0;
+    }
+    .dropdown li a {
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+    .site-header {
+      padding: 1rem;
+      text-align: center;
+    }
+    .hero-image {
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 20px auto;
+      margin: 2rem auto;
     }
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <h1>BBF2003 Studio Art</h1>
+  </header>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="installation.html">Installation</a>
-      <nav style="margin-left: 10px;">
-        <a href="nddd.html">Not Damaged / Damaged / Destroyed</a>
-        <a href="wwgb.html">We Won’t Go Back</a>
-      </nav>
-    <a href="sculpture.html">Sculpture</a>
-      <nav style="margin-left: 10px;">
-        <a href="reflection.html">Reflection</a>
-      </nav>
-    <a href="video.html">Video</a>
-      <nav style="margin-left: 10px;">
-        <a href="glitch.html">Glitch</a>
-      </nav>
+    <ul class="nav-container">
+      <li class="nav-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Artwork</a>
+        <ul class="dropdown">
+          <li><a href="installation.html">Installations</a></li>
+          <li><a href="sculpture.html">Sculpture</a></li>
+          <li><a href="digital.html">Digital</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
   </nav>
+
+  <!-- Hero image -->
+  <img src="docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image" />
+
   <main>
-    <!-- Page-specific content goes here -->
+    <p>Welcome to my studio art site. Explore my work and learn more about my artistic journey.</p>
   </main>
 </body>
 </html>
