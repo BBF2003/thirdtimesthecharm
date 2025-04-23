@@ -1,71 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blossom Bogen-Froese</title>
-    <style>
-        body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #CCCCCC;
-            color: blue;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        #sidebar {
-            width: 200px;
-            background-color: #CCCCCC;
-            padding: 20px;
-            height: 100vh;
-            box-sizing: border-box;
-        }
-        #sidebar a {
-            display: block;
-            color: blue;
-            text-decoration: underline;
-            margin: 10px 0;
-        }
-        #main-content {
-            padding: 20px;
-            width: 100%;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9em;
-            color: blue;
-        }
-        .home-image {
-            margin-top: 60px;
-        }
-        /* Add margin to prevent image from touching top */
-        .home-image img {
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 600px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>BBF2003</title>
+  <style>
+    body {
+      background-color: #CCCCCC;
+      font-family: "Times New Roman", Arial, serif;
+      color: blue;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav {
+      width: 200px;
+      padding: 20px;
+    }
+    nav a {
+      display: block;
+      color: blue;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
 </head>
 <body>
-
-<div id="sidebar">
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="artwork.html">Artwork</a>
-</div>
-
-<div id="main-content">
-    <div class="home-image">
-        <!-- Updated Image Path -->
-        <img src="images/Laughter_Car.jpg" alt="Laughter Car">
-    </div>
-
-    <footer>
-        &copy; 2025 Blossom Bogen-Froese. All rights reserved.
-    </footer>
-</div>
-
+    <a href="installation.html">Installation</a>
+      <nav style="margin-left: 10px;">
+        <a href="nddd.html">Not Damaged / Damaged / Destroyed</a>
+        <a href="wwgb.html">We Won’t Go Back</a>
+      </nav>
+    <a href="sculpture.html">Sculpture</a>
+      <nav style="margin-left: 10px;">
+        <a href="reflection.html">Reflection</a>
+      </nav>
+    <a href="video.html">Video</a>
+      <nav style="margin-left: 10px;">
+        <a href="glitch.html">Glitch</a>
+      </nav>
+  </nav>
+  <main>
+    <!-- Page-specific content goes here -->
+  </main>
 </body>
 </html>
