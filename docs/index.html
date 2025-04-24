@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - BBF2003 Studio Art</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBF2003 Studio Art</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -12,9 +12,11 @@
       margin: 0;
       padding: 0;
     }
-    a {
+    a, span {
       color: blue;
       text-decoration: none;
+      padding: 0.5rem;
+      display: block;
     }
     nav {
       background-color: #fff;
@@ -29,10 +31,6 @@
       margin-right: 2rem;
       list-style: none;
     }
-    .nav-item > a {
-      padding: 0.5rem;
-      display: block;
-    }
     .dropdown {
       display: none;
       position: absolute;
@@ -40,7 +38,7 @@
       left: 0;
       background-color: #fff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      min-width: 150px;
+      min-width: 200px;
       z-index: 1000;
     }
     .dropdown li {
@@ -50,7 +48,7 @@
       padding: 0.5rem 1rem;
       display: block;
     }
-    .nav-item:hover .dropdown {
+    .nav-item:hover > .dropdown {
       display: block;
     }
     .site-header {
@@ -71,28 +69,45 @@
   </header>
   <nav>
     <ul class="nav-container">
+      <!-- Home links to index.html -->
       <li class="nav-item">
         <a href="index.html">Home</a>
       </li>
-      <li class="nav-item">
-        <a href="#">Artwork</a>
-        <ul class="dropdown">
-          <li><a href="installation.html">Installations</a></li>
-          <li><a href="sculpture.html">Sculpture</a></li>
-          <li><a href="digital.html">Digital</a></li>
-        </ul>
-      </li>
+
+      <!-- About links to about.html -->
       <li class="nav-item">
         <a href="about.html">About</a>
       </li>
+
+      <!-- Installation with hover dropdown -->
       <li class="nav-item">
-        <a href="contact.html">Contact</a>
+        <span>Installation</span>
+        <ul class="dropdown">
+          <li><a href="we-wont-go-back.html">We Won’t Go Back</a></li>
+          <li><a href="not-damaged-damaged-destroyed.html">Not Damaged Damaged Destroyed</a></li>
+        </ul>
+      </li>
+
+      <!-- Sculpture with hover dropdown -->
+      <li class="nav-item">
+        <span>Sculpture</span>
+        <ul class="dropdown">
+          <li><a href="live-feed.html">Live Feed</a></li>
+        </ul>
+      </li>
+
+      <!-- Video with hover dropdown -->
+      <li class="nav-item">
+        <span>Video</span>
+        <ul class="dropdown">
+          <li><a href="glitch.html">Glitch</a></li>
+        </ul>
       </li>
     </ul>
   </nav>
 
   <!-- Hero image -->
-  <img src="docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image" />
+  <img src="docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
 
   <main>
     <p>Welcome to my studio art site. Explore my work and learn more about my artistic journey.</p>
