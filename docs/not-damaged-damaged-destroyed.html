@@ -55,7 +55,7 @@
       display: block;
     }
     main {
-      margin-left: 200px; /* Ensure the content doesn't overlap with the left navigation */
+      margin-left: 200px; /* Adjusted for proper spacing from left menu */
       padding: 2rem;
       text-align: center; /* Center the main content text */
     }
@@ -69,7 +69,7 @@
     .image-gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.5rem; /* Add space between images */
       justify-content: center; /* Center the gallery */
     }
     /* Row of 2 images */
@@ -79,7 +79,7 @@
       justify-content: center; /* Center the row of two images */
     }
     .row-2 img {
-      max-width: 48%;
+      width: 45%; /* Set fixed width for all images */
       height: auto; /* Preserve aspect ratio */
     }
     /* Row of 3 images */
@@ -89,7 +89,7 @@
       justify-content: center; /* Center the row of three images */
     }
     .row-3 img {
-      max-width: 32%;
+      width: 30%; /* Set fixed width for all images */
       height: auto; /* Preserve aspect ratio */
     }
     /* Row of 1 image */
@@ -99,7 +99,7 @@
       justify-content: center; /* Center the single image */
     }
     .row-1 img {
-      max-width: 48%;
+      width: 45%; /* Set fixed width for the image */
       height: auto; /* Preserve aspect ratio */
     }
   </style>
