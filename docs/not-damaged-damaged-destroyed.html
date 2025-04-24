@@ -63,15 +63,41 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    /* New styling for the image gallery */
+    /* Image gallery styling */
     .image-gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
     .image-gallery img {
-      width: 48%; /* Two images per row with a small gap */
       height: auto;
+    }
+    /* Row of 2 images */
+    .row-2 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .row-2 img {
+      width: 48%;
+    }
+    /* Row of 3 images */
+    .row-3 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .row-3 img {
+      width: 32%;
+    }
+    /* Row of 1 image */
+    .row-1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .row-1 img {
+      width: 48%;
     }
   </style>
 </head>
@@ -107,20 +133,30 @@
     <p>[Project description, text, or introduction goes here]</p>
 
     <!-- Image Gallery Section -->
-    <div class="image-gallery">
+
+    <!-- Row 1: Two Images -->
+    <div class="row-2">
       <img src="images/Title_NDDD.jpg" alt="Title Image">
       <img src="images/Entrance_NDDD.jpg" alt="Entrance Image">
-      
-      <img src="images/Lamps.jpg" alt="Lamps">
-      <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
-      
-      <img src="images/Frame.jpg" alt="Frame">
-      <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
-      
+    </div>
+
+    <!-- Row 2: Three Images -->
+    <div class="row-3">
       <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
       <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
-      
       <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
+    </div>
+
+    <!-- Row 3: Three Images -->
+    <div class="row-3">
+      <img src="images/Lamps.jpg" alt="Lamps">
+      <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
+      <img src="images/Frame.jpg" alt="Frame">
+    </div>
+
+    <!-- Row 4: One Image -->
+    <div class="row-1">
+      <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
     </div>
   </main>
 </body>
