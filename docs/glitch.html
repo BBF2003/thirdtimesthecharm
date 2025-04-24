@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glitch</title>
+  <style>
+    body {
+      background-color: #CCCCCC;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      margin-left: 200px;
+    }
+    a, span {
+      color: blue;
+      text-decoration: none;
+      padding: 0.5rem;
+      display: block;
+    }
+    nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #CCCCCC;
+      padding: 1rem;
+      width: 200px;
+    }
+    .nav-container {
+      display: block;
+    }
+    .nav-item {
+      position: relative;
+      margin-bottom: 1rem;
+      list-style: none;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      min-width: 200px;
+      z-index: 1000;
+    }
+    .dropdown li {
+      margin: 0;
+    }
+    .dropdown li a {
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+    .nav-item:hover > .dropdown {
+      display: block;
+    }
+    main {
+      margin-left: 220px;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-container">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item">
+        <span>Installation</span>
+        <ul class="dropdown">
+          <li><a href="we-wont-go-back.html">We Won’t Go Back</a></li>
+          <li><a href="not-damaged-damaged-destroyed.html">Not Damaged Damaged Destroyed</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <span>Sculpture</span>
+        <ul class="dropdown">
+          <li><a href="live-feed.html">Live Feed</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <span>Video</span>
+        <ul class="dropdown">
+          <li><a href="glitch.html">Glitch</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
+  <main>
+    <h1>Glitch</h1>
+    <p>[Project description, image, or content goes here]</p>
+  </main>
+</body>
+</html>
