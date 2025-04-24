@@ -63,6 +63,16 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+    /* New styling for the image gallery */
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .image-gallery img {
+      width: 48%; /* Two images per row with a small gap */
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -94,7 +104,24 @@
 
   <main>
     <h1>Not Damaged Damaged Destroyed</h1>
-    <p>[Project description, image, or content goes here]</p>
+    <p>[Project description, text, or introduction goes here]</p>
+
+    <!-- Image Gallery Section -->
+    <div class="image-gallery">
+      <img src="images/Title_NDDD.jpg" alt="Title Image">
+      <img src="images/Entrance_NDDD.jpg" alt="Entrance Image">
+      
+      <img src="images/Lamps.jpg" alt="Lamps">
+      <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
+      
+      <img src="images/Frame.jpg" alt="Frame">
+      <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
+      
+      <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
+      <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
+      
+      <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
+    </div>
   </main>
 </body>
 </html>
