@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
   <style>
     body {
@@ -45,9 +45,6 @@
       min-width: 200px;
       z-index: 1000;
     }
-    .dropdown li {
-      margin: 0;
-    }
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
@@ -55,10 +52,7 @@
     .nav-item:hover > .dropdown {
       display: block;
     }
-    main {
-      margin-left: 220px;
-      padding: 1rem;
-    }
+
     h1 {
       text-align: center;
       font-size: 1.5rem;
@@ -66,19 +60,19 @@
       text-transform: uppercase;
     }
 
-    /* Slideshow styling */
     .slideshow-container {
       position: relative;
-      max-width: 80%; /* Adjusted width for smaller slideshow */
+      max-width: 80%;
       margin: 2rem auto;
     }
 
     .slides {
       display: none;
-      width: 100%;
     }
 
-    .active {
+    .slides img {
+      width: 100%;
+      height: auto;
       display: block;
     }
 
@@ -86,132 +80,16 @@
       cursor: pointer;
       position: absolute;
       top: 50%;
-      padding: 16px;
-      background-color: rgba(0, 0, 0, 0.5);
+      padding: 12px;
       color: white;
-      border: none;
+      font-weight: bold;
       font-size: 18px;
-      transition: 0.3s ease;
-      z-index: 1;
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      transform: translateY(-50%);
+      z-index: 10;
     }
 
     .prev {
       left: 0;
-      transform: translateY(-50%);
-    }
-
-    .next {
-      right: 0;
-      transform: translateY(-50%);
-    }
-
-    .dot-container {
-      text-align: center;
-      padding: 10px;
-    }
-
-    .dot {
-      height: 10px; /* Smaller dots */
-      width: 10px;  /* Smaller dots */
-      margin: 0 4px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-
-    .active-dot {
-      background-color: #717171;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <ul class="nav-container">
-      <li class="nav-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="about.html">About</a>
-      </li>
-      <li class="nav-item">
-        <span>Installation</span>
-        <ul class="dropdown">
-          <li><a href="we-wont-go-back.html">We Won’t Go Back</a></li>
-          <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <span>Sculpture</span>
-        <ul class="dropdown">
-          <li><a href="live-feed.html">Live Feed</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <span>Video</span>
-        <ul class="dropdown">
-          <li><a href="glitch.html">Glitch</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-
-  <main>
-    <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
-    
-    <!-- Slideshow -->
-    <div class="slideshow-container">
-      <div class="slides active">
-        <img src="images/Title_NDDD.jpg" alt="Title" style="width:100%">
-      </div>
-      <div class="slides">
-        <img src="images/Entrance_NDDD.jpg" alt="Entrance" style="width:100%">
-      </div>
-
-      <div class="slides">
-        <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3" style="width:100%">
-      </div>
-      <div class="slides">
-        <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2" style="width:100%">
-      </div>
-      <div class="slides">
-        <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1" style="width:100%">
-      </div>
-
-      <div class="slides">
-        <img src="images/Lamps.jpg" alt="Lamps" style="width:100%">
-      </div>
-      <div class="slides">
-        <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations" style="width:100%">
-      </div>
-      <div class="slides">
-        <img src="images/Frame.jpg" alt="Frame" style="width:100%">
-      </div>
-
-      <div class="slides">
-        <img src="images/Air_Conditioner.jpg" alt="Air Conditioner" style="width:100%">
-      </div>
-
-      <!-- Next/Previous buttons -->
-      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="next" onclick="changeSlide(1)">&#10095;</button>
-
-      <!-- Dots -->
-      <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-      </div>
-    </div>
-  </main>
-
-  <script>
-    let slideIndex = 1;
-
-    function showSlides(n) {
-      let slides = document.querySelectorAll('.slides');
+   
