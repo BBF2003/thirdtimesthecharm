@@ -72,6 +72,17 @@
       color: blue;
       text-decoration: none;
     }
+
+    .video-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .video-container iframe {
+      width: 80%;
+      height: auto;
+      max-width: 640px;
+    }
   </style>
 </head>
 <body>
@@ -102,6 +113,15 @@
   </nav>
 
   <h1>LIVE FEED</h1>
+
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/GOjYvXwKRRQ" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
 
 </body>
 </html>
