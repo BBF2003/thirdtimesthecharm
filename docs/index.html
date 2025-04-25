@@ -73,16 +73,18 @@
       color: blue;
     }
 
-    /* Ensure the laughter image is displayed properly */
-    .home-image {
-      display: block;
-      margin: 50px auto;
-      width: 80%; /* Adjust the width as needed */
-      max-width: 600px; /* Optional max-width */
-      height: auto;
-      background-color: #f0f0f0; /* Temporary background color for debugging */
+    /* Image style */
+    .image-container {
+      text-align: center;
+      margin-top: 50px;
     }
 
+    .image-container img {
+      width: 80%; /* Adjust the image size as needed */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
@@ -112,6 +114,8 @@
     </ul>
   </nav>
 
-  <img src="docs/images/Laughter_Car.jpg" alt="Laughter Car" class="home-image">
+  <div class="image-container">
+    <img src="docs/images/Laughter_Car.jpg" alt="Laughter Image">
+  </div>
 </body>
 </html>
