@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Not Damaged Damaged Destroyed</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -11,8 +11,14 @@
       color: #000;
       margin: 0;
       padding: 0;
+      margin-left: 200px;
     }
-
+    a, span {
+      color: blue;
+      text-decoration: none;
+      padding: 0.5rem;
+      display: block;
+    }
     nav {
       position: absolute;
       left: 0;
@@ -21,24 +27,14 @@
       padding: 1rem;
       width: 200px;
     }
-
-    a, span {
-      color: blue;
-      text-decoration: none;
-      padding: 0.5rem;
-      display: block;
-    }
-
     .nav-container {
       display: block;
     }
-
     .nav-item {
       position: relative;
       margin-bottom: 1rem;
       list-style: none;
     }
-
     .dropdown {
       display: none;
       position: absolute;
@@ -49,100 +45,53 @@
       min-width: 200px;
       z-index: 1000;
     }
-
     .dropdown li {
       margin: 0;
     }
-
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
     }
-
     .nav-item:hover > .dropdown {
       display: block;
     }
-
     main {
-      margin-left: 200px;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-    }
-
-    .slideshow-container {
-      position: relative;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .slide {
-      display: none;
-    }
-
-    .slide img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
+      margin-left: 220px;
       padding: 1rem;
-      margin-top: -22px;
-      color: blue;
-      font-weight: bold;
-      font-size: 1.5rem;
-      user-select: none;
-      background: #CCCCCC;
     }
-
-    .next {
-      right: 0;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-left: -50px;
     }
-
-    .prev {
-      left: 0;
+    .gallery img {
+      width: 30%;
+      height: auto;
+      object-fit: cover;
     }
-
-    .dot-container {
+    h1 {
       text-align: center;
-      margin-top: 1rem;
-    }
-
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background-color: #888;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .active {
-      background-color: blue;
+      font-size: 1.5rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <nav>
     <ul class="nav-container">
-      <li class="nav-item"><a href="index.html">Home</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html">About</a>
+      </li>
       <li class="nav-item">
         <span>Installation</span>
         <ul class="dropdown">
           <li><a href="we-wont-go-back.html">We Won’t Go Back</a></li>
-          <li><a href="not-damaged-damaged-destroyed.html">Not Damaged Damaged Destroyed</a></li>
+          <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
         </ul>
       </li>
       <li class="nav-item">
@@ -162,62 +111,20 @@
 
   <main>
     <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
+    <div class="gallery">
+      <img src="images/Title_NDDD.jpg" alt="Title">
+      <img src="images/Entrance_NDDD.jpg" alt="Entrance">
 
-    <div class="slideshow-container">
-      <div class="slide"><img src="images/Title_NDDD.jpg" alt="Title"></div>
-      <div class="slide"><img src="images/Entrance_NDDD.jpg" alt="Entrance"></div>
-      <div class="slide"><img src="images/Boardwalk_3.jpg" alt="Boardwalk 3"></div>
-      <div class="slide"><img src="images/Boardwalk_2.jpg" alt="Boardwalk 2"></div>
-      <div class="slide"><img src="images/Boardwalk_1.jpg" alt="Boardwalk 1"></div>
-      <div class="slide"><img src="images/Lamps.jpg" alt="Lamps"></div>
-      <div class="slide"><img src="images/Christmas_decorations.jpg" alt="Christmas decorations"></div>
-      <div class="slide"><img src="images/Frame.jpg" alt="Frame"></div>
-      <div class="slide"><img src="images/Air_Conditioner.jpg" alt="Air Conditioner"></div>
+      <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
+      <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
+      <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
 
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-    </div>
+      <img src="images/Lamps.jpg" alt="Lamps">
+      <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
+      <img src="images/Frame.jpg" alt="Frame">
 
-    <div class="dot-container">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-      <span class="dot" onclick="currentSlide(6)"></span>
-      <span class="dot" onclick="currentSlide(7)"></span>
-      <span class="dot" onclick="currentSlide(8)"></span>
-      <span class="dot" onclick="currentSlide(9)"></span>
+      <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
     </div>
   </main>
-
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("slide");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-  </script>
 </body>
 </html>
