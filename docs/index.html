@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
+  <title>BBF2003 Studio Art</title>
   <style>
     body {
       background-color: #CCCCCC;
       font-family: 'Courier New', Courier, monospace;
-      color: #000;
+      color: blue; /* Make text blue */
       margin: 0;
       padding: 0;
       margin-left: 200px;
@@ -73,25 +73,22 @@
       color: blue;
     }
 
-    .image-container {
-      text-align: center;
-      margin-top: 50px; /* Lower the image */
-    }
-
-    .image-container img {
-      width: 60%; /* Resize image */
+    .hero-image {
+      max-width: 50%;
       height: auto;
-      display: inline-block;
+      display: block;
+      margin: 2rem auto;
     }
 
-    .blossom-name {
+    .blossom-text {
       position: absolute;
-      right: 10%;
-      top: 70%; /* Place Blossom Bogen-Froese under the image */
-      font-size: 1.2rem;
-      text-transform: uppercase;
+      top: 50%;
+      right: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
       color: blue;
       text-decoration: underline;
+      text-transform: uppercase;
     }
   </style>
 </head>
@@ -122,12 +119,13 @@
     </ul>
   </nav>
 
-  <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
+  <h1>BBF2003 Studio Art</h1>
 
-  <div class="image-container">
-    <img src="images/Title_NDDD.jpg" alt="Title Image">
-    <div class="blossom-name">Blossom Bogen-Froese</div> <!-- Blossom name under the image -->
+  <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
+
+  <div class="blossom-text">
+    Blossom Bogen-Froese
   </div>
-  
+
 </body>
 </html>
