@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BBF2003 Studio Art</title>
+  <title>Home</title>
   <style>
     body {
       background-color: #CCCCCC;
-      font-family: monospace;
-      color: #000;
+      font-family: 'Courier New', Courier, monospace;
+      color: blue; /* Make text blue */
       margin: 0;
       padding: 0;
       margin-left: 200px;
+      font-weight: bold; /* Make all text bold */
     }
+
     a, span {
       color: blue;
-      text-decoration: none;
+      text-decoration: underline;
       padding: 0.5rem;
       display: block;
+      text-transform: uppercase;
+      font-weight: bold; /* Make links bold */
     }
+
     nav {
       position: absolute;
       left: 0;
@@ -26,15 +31,19 @@
       background-color: #CCCCCC;
       padding: 1rem;
       width: 200px;
+      font-weight: bold; /* Make sidebar text bold */
     }
+
     .nav-container {
       display: block;
     }
+
     .nav-item {
       position: relative;
       margin-bottom: 1rem;
       list-style: none;
     }
+
     .dropdown {
       display: none;
       position: absolute;
@@ -45,34 +54,110 @@
       min-width: 200px;
       z-index: 1000;
     }
+
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
     }
+
     .nav-item:hover > .dropdown {
       display: block;
     }
-    .hero-image {
-      max-width: 50%;
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: blue;
+    }
+
+    .photo-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .photo-container img {
+      width: 80%; /* Adjust photo size */
+      height: auto;
+    }
+
+    .photo-container p {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: blue;
+      font-weight: bold;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 80%;
+      margin: 2rem auto;
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
       height: auto;
       display: block;
-      margin: 2rem auto;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: rgba(0,0,0,0.4);
+      border: none;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px; /* Move arrows closer to image */
+    }
+
+    .next {
+      right: 10px; /* Move arrows closer to image */
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 6px; /* Make circles smaller */
+      width: 6px; /* Make circles smaller */
+      margin: 0 4px;
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .active, .dot:hover {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
   <nav>
     <ul class="nav-container">
-      <li class="nav-item">
-        <a href="index.html">HOME</a>
-      </li>
-      <li class="nav-item">
-        <a href="about.html">ABOUT</a>
-      </li>
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item">
         <span>INSTALLATION</span>
         <ul class="dropdown">
-          <li><a href="we-wont-go-back.html">WE'RE GOING BACK</a></li>
+          <li><a href="we-wont-go-back.html">WE’RE GOING BACK</a></li>
           <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
         </ul>
       </li>
@@ -91,8 +176,12 @@
     </ul>
   </nav>
 
-  <main>
-    <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
-  </main>
+  <h1>HOME</h1>
+  
+  <div class="photo-container">
+    <img src="your-photo.jpg" alt="Main Photo">
+    <p>Blossom Bogen-Froese, 2025</p>
+  </div>
+
 </body>
 </html>
