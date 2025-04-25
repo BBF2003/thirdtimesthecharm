@@ -9,21 +9,18 @@
       background-color: #CCCCCC;
       font-family: monospace;
       color: blue;
-      font-weight: bold;
       margin: 0;
       padding: 0;
       margin-left: 200px;
-      text-transform: uppercase;
     }
-
     a, span {
       color: blue;
       text-decoration: underline;
       padding: 0.5rem;
       display: block;
       font-weight: bold;
+      font-size: 1rem;
     }
-
     nav {
       position: absolute;
       left: 0;
@@ -32,17 +29,14 @@
       padding: 1rem;
       width: 200px;
     }
-
     .nav-container {
       display: block;
     }
-
     .nav-item {
       position: relative;
       margin-bottom: 1rem;
       list-style: none;
     }
-
     .dropdown {
       display: none;
       position: absolute;
@@ -53,31 +47,31 @@
       min-width: 200px;
       z-index: 1000;
     }
-
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
       text-decoration: none;
     }
-
     .nav-item:hover > .dropdown {
       display: block;
     }
-
     .hero-image {
       max-width: 50%;
       height: auto;
       display: block;
-      margin: 5rem auto 1rem auto;
+      margin: 5rem auto 0 auto;
     }
-
-    .artist-name {
-      text-align: right;
-      padding-right: 3rem;
+    .caption {
       font-size: 1rem;
       color: blue;
       font-weight: bold;
-      text-decoration: underline;
+      font-family: monospace;
+      margin-top: 0.5rem;
+      text-align: right;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -108,7 +102,7 @@
     </ul>
   </nav>
 
-  <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
-  <div class="artist-name">BLOSSOM BOGEN-FROESE</div>
+  <img src="images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
+  <div class="caption">BLOSSOM BOGEN-FROESE, 2025</div>
 </body>
 </html>
