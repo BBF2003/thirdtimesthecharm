@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glitch</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WE'RE GOING BACK</title>
   <style>
     body {
       background-color: #CCCCCC;
-      font-family: 'Times New Roman', Times, serif;
-      color: #000;
+      font-family: 'Courier New', Courier, monospace;
+      color: blue;
       margin: 0;
       padding: 0;
       margin-left: 200px;
+      font-weight: bold;
     }
+
     a, span {
       color: blue;
-      text-decoration: none;
+      text-decoration: underline;
       padding: 0.5rem;
       display: block;
+      text-transform: uppercase;
+      font-weight: bold;
     }
+
     nav {
       position: absolute;
       left: 0;
@@ -26,15 +31,19 @@
       background-color: #CCCCCC;
       padding: 1rem;
       width: 200px;
+      font-weight: bold;
     }
+
     .nav-container {
       display: block;
     }
+
     .nav-item {
       position: relative;
       margin-bottom: 1rem;
       list-style: none;
     }
+
     .dropdown {
       display: none;
       position: absolute;
@@ -45,23 +54,35 @@
       min-width: 200px;
       z-index: 1000;
     }
-    .dropdown li {
-      margin: 0;
-    }
+
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
     }
+
     .nav-item:hover > .dropdown {
       display: block;
     }
-    main {
-      margin-left: 220px;
-      padding: 2rem;
-    }
+
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: blue;
+    }
+
+    .video-container {
+      max-width: 80%;
+      margin: 2rem auto;
+      display: block;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
 </head>
@@ -71,30 +92,35 @@
       <li class="nav-item"><a href="index.html">Home</a></li>
       <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item">
-        <span>Installation</span>
+        <span>INSTALLATION</span>
         <ul class="dropdown">
-          <li><a href="we-wont-go-back.html">We Won’t Go Back</a></li>
-          <li><a href="not-damaged-damaged-destroyed.html">Not Damaged Damaged Destroyed</a></li>
+          <li><a href="we-wont-go-back.html">WE'RE GOING BACK</a></li>
+          <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
         </ul>
       </li>
       <li class="nav-item">
-        <span>Sculpture</span>
+        <span>SCULPTURE</span>
         <ul class="dropdown">
-          <li><a href="live-feed.html">Live Feed</a></li>
+          <li><a href="live-feed.html">LIVE FEED</a></li>
         </ul>
       </li>
       <li class="nav-item">
-        <span>Video</span>
+        <span>VIDEO</span>
         <ul class="dropdown">
-          <li><a href="glitch.html">Glitch</a></li>
+          <li><a href="glitch.html">GLITCH</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 
   <main>
-    <h1>Glitch</h1>
-    <p>[Project description, image, or content goes here]</p>
+    <h1>WE'RE GOING BACK</h1>
+    <div class="video-container">
+      <video controls>
+        <source src="video/your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </main>
 </body>
 </html>
