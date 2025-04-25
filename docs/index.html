@@ -7,18 +7,21 @@
   <style>
     body {
       background-color: #CCCCCC;
-      font-family: 'Times New Roman', Times, serif;
+      font-family: 'Courier New', Courier, monospace;
       color: #000;
       margin: 0;
       padding: 0;
       margin-left: 200px;
     }
+
     a, span {
       color: blue;
       text-decoration: underline;
       padding: 0.5rem;
       display: block;
+      text-transform: uppercase;
     }
+
     nav {
       position: absolute;
       left: 0;
@@ -27,14 +30,17 @@
       padding: 1rem;
       width: 200px;
     }
+
     .nav-container {
       display: block;
     }
+
     .nav-item {
       position: relative;
       margin-bottom: 1rem;
       list-style: none;
     }
+
     .dropdown {
       display: none;
       position: absolute;
@@ -45,10 +51,12 @@
       min-width: 200px;
       z-index: 1000;
     }
+
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
     }
+
     .nav-item:hover > .dropdown {
       display: block;
     }
@@ -58,25 +66,91 @@
       font-size: 1.5rem;
       margin-top: 2rem;
       text-transform: uppercase;
+      text-decoration: underline;
+      color: blue;
     }
 
     .hero-image {
       max-width: 50%;
       height: auto;
       display: block;
+      margin: 40px auto;
+    }
+
+    .blossom-name {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: blue;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 80%;
       margin: 2rem auto;
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: rgba(0,0,0,0.4);
+      border: none;
+      transform: translateY(-50%);
+      z-index: 10;
+      margin-left: -20px; /* Move arrows closer */
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 6px; /* Smaller dots */
+      width: 6px;  /* Smaller dots */
+      margin: 0 3px; /* Adjust spacing */
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .active, .dot:hover {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
   <nav>
     <ul class="nav-container">
-      <li class="nav-item">
-        <a href="index.html">HOME</a>
-      </li>
-      <li class="nav-item">
-        <a href="about.html">ABOUT</a>
-      </li>
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item">
         <span>INSTALLATION</span>
         <ul class="dropdown">
@@ -99,9 +173,90 @@
     </ul>
   </nav>
 
+  <h1>WE’RE GOING BACK</h1>
+
+  <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
+
+  <div class="blossom-name">Blossom Bogen-Froese</div>
+
   <main>
-    <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
-    <!-- Your content here -->
+    <div class="slideshow-container">
+      <div class="slides fade">
+        <img src="images/Title_NDDD.jpg" alt="Title">
+      </div>
+      <div class="slides fade">
+        <img src="images/Entrance_NDDD.jpg" alt="Entrance">
+      </div>
+      <div class="slides fade">
+        <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
+      </div>
+      <div class="slides fade">
+        <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
+      </div>
+      <div class="slides fade">
+        <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
+      </div>
+      <div class="slides fade">
+        <img src="images/Lamps.jpg" alt="Lamps">
+      </div>
+      <div class="slides fade">
+        <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
+      </div>
+      <div class="slides fade">
+        <img src="images/Frame.jpg" alt="Frame">
+      </div>
+      <div class="slides fade">
+        <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
+      </div>
+
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+    </div>
   </main>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
 </body>
 </html>
