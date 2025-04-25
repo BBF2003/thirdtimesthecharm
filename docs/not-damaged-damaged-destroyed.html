@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Not Damaged Damaged Destroyed</title>
   <style>
     body {
@@ -12,12 +12,7 @@
       margin: 0;
       padding: 0;
     }
-    a, span {
-      color: blue;
-      text-decoration: none;
-      padding: 0.5rem;
-      display: block;
-    }
+
     nav {
       position: absolute;
       left: 0;
@@ -26,14 +21,24 @@
       padding: 1rem;
       width: 200px;
     }
+
+    a, span {
+      color: blue;
+      text-decoration: none;
+      padding: 0.5rem;
+      display: block;
+    }
+
     .nav-container {
       display: block;
     }
+
     .nav-item {
       position: relative;
       margin-bottom: 1rem;
       list-style: none;
     }
+
     .dropdown {
       display: none;
       position: absolute;
@@ -44,63 +49,50 @@
       min-width: 200px;
       z-index: 1000;
     }
+
     .dropdown li {
       margin: 0;
     }
+
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
     }
+
     .nav-item:hover > .dropdown {
       display: block;
     }
+
     main {
-      margin-left: 200px; /* Adjusted for proper spacing from left menu */
+      margin-left: 200px;
       padding: 2rem;
-      text-align: center; /* Center the main content text */
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
       text-align: center;
     }
-    /* Image gallery styling */
-    .image-gallery {
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    .gallery {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem; /* Add space between images */
-      justify-content: center; /* Center the gallery */
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
     }
-    /* Row of 2 images */
-    .row-2 {
-      width: 100%;
+
+    .image-row {
       display: flex;
-      justify-content: center; /* Center the row of two images */
+      gap: 1rem;
+      flex-wrap: nowrap;
     }
-    .row-2 img {
-      width: 45%; /* Set fixed width for all images */
-      height: auto; /* Preserve aspect ratio */
-    }
-    /* Row of 3 images */
-    .row-3 {
-      width: 100%;
-      display: flex;
-      justify-content: center; /* Center the row of three images */
-    }
-    .row-3 img {
-      width: 30%; /* Set fixed width for all images */
-      height: auto; /* Preserve aspect ratio */
-    }
-    /* Row of 1 image */
-    .row-1 {
-      width: 100%;
-      display: flex;
-      justify-content: center; /* Center the single image */
-    }
-    .row-1 img {
-      width: 45%; /* Set fixed width for the image */
-      height: auto; /* Preserve aspect ratio */
+
+    .image-row img {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+      display: block;
     }
   </style>
 </head>
@@ -132,34 +124,33 @@
   </nav>
 
   <main>
-    <!-- Title updated as requested -->
     <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
 
-    <!-- Image Gallery Section -->
+    <div class="gallery">
+      <!-- Row 1: Two Images -->
+      <div class="image-row">
+        <img src="images/Title_NDDD.jpg" alt="Title Image">
+        <img src="images/Entrance_NDDD.jpg" alt="Entrance Image">
+      </div>
 
-    <!-- Row 1: Two Images -->
-    <div class="row-2">
-      <img src="images/Title_NDDD.jpg" alt="Title Image">
-      <img src="images/Entrance_NDDD.jpg" alt="Entrance Image">
-    </div>
+      <!-- Row 2: Three Images -->
+      <div class="image-row">
+        <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
+        <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
+        <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
+      </div>
 
-    <!-- Row 2: Three Images -->
-    <div class="row-3">
-      <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
-      <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
-      <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
-    </div>
+      <!-- Row 3: Three Images -->
+      <div class="image-row">
+        <img src="images/Lamps.jpg" alt="Lamps">
+        <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
+        <img src="images/Frame.jpg" alt="Frame">
+      </div>
 
-    <!-- Row 3: Three Images -->
-    <div class="row-3">
-      <img src="images/Lamps.jpg" alt="Lamps">
-      <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
-      <img src="images/Frame.jpg" alt="Frame">
-    </div>
-
-    <!-- Row 4: One Image -->
-    <div class="row-1">
-      <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
+      <!-- Row 4: One Image -->
+      <div class="image-row">
+        <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
+      </div>
     </div>
   </main>
 </body>
