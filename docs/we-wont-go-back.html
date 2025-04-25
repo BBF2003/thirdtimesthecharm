@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WE'RE GOING BACK</title>
+  <title>WE’RE GOING BACK</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -70,7 +70,7 @@
       margin-top: 2rem;
       text-transform: uppercase;
       color: blue;
-      text-decoration: none; /* <-- No underline on title */
+      text-decoration: none;
     }
 
     .video-container {
@@ -78,10 +78,11 @@
       margin-top: 50px;
     }
 
-    .video-container video {
-      width: 50%;
-      height: auto;
-      display: inline-block;
+    .video-container iframe {
+      width: 60%;
+      max-width: 600px;
+      height: 340px;
+      border: none;
     }
   </style>
 </head>
@@ -112,13 +113,10 @@
     </ul>
   </nav>
 
-  <h1>WE'RE GOING BACK</h1>
+  <h1>WE’RE GOING BACK</h1>
 
   <div class="video-container">
-    <video controls>
-      <source src="going-back.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
   </div>
 
 </body>
