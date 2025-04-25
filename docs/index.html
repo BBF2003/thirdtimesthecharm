@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - BBF2003 Studio Art</title>
+  <title>We're Going Back</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -73,11 +73,16 @@
       color: blue;
     }
 
-    .hero-image {
+    .video-container {
       max-width: 50%;
+      margin: 2rem auto;
+      display: block;
+    }
+
+    video {
+      width: 100%;
       height: auto;
       display: block;
-      margin: 2rem auto;
     }
   </style>
 </head>
@@ -108,10 +113,14 @@
     </ul>
   </nav>
 
-  <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
-  
   <main>
-    <!-- Your content here -->
+    <h1>WE'RE GOING BACK</h1>
+    <div class="video-container">
+      <video controls>
+        <source src="video/your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </main>
 </body>
 </html>
