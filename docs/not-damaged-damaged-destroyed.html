@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
+  <title>BBF2003 Studio Art</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -12,15 +12,14 @@
       margin: 0;
       padding: 0;
       margin-left: 200px;
-      text-transform: uppercase; /* Capitalize all text */
-      text-decoration: underline; /* Underline all text */
     }
 
     a, span {
       color: blue;
-      text-decoration: underline; /* Underline links */
+      text-decoration: underline;
       padding: 0.5rem;
       display: block;
+      text-transform: uppercase;
     }
 
     nav {
@@ -64,10 +63,19 @@
 
     h1 {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-top: 2rem;
-      text-transform: uppercase; /* Capitalize title */
-      text-decoration: underline; /* Underline title */
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: blue;
+    }
+
+    .hero-image {
+      max-width: 50%;
+      height: auto;
+      display: block;
+      margin: 2rem auto;
+      margin-top: 20px;
     }
 
     .slideshow-container {
@@ -81,10 +89,9 @@
     }
 
     .slides img {
-      max-width: 60%;
+      width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto;
     }
 
     .prev, .next {
@@ -99,6 +106,7 @@
       border: none;
       transform: translateY(-50%);
       z-index: 10;
+      margin-left: -20px; /* Move arrows closer */
     }
 
     .prev {
@@ -114,30 +122,31 @@
       margin-top: 1rem;
     }
 
-    /* Star shape and color */
     .dot {
-      font-size: 30px;
-      margin: 0 10px;
-      color: #888;  /* Default color */
+      height: 6px; /* Smaller dots */
+      width: 6px;  /* Smaller dots */
+      margin: 0 3px; /* Adjust spacing */
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
       cursor: pointer;
-      transition: color 0.3s ease;
     }
 
-    /* Active star and hover effect */
     .active, .dot:hover {
-      color: gold;  /* Yellow star */
+      background-color: #333;
     }
   </style>
 </head>
 <body>
   <nav>
     <ul class="nav-container">
-      <li class="nav-item"><a href="index.html">HOME</a></li>
-      <li class="nav-item"><a href="about.html">ABOUT</a></li>
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item">
         <span>INSTALLATION</span>
         <ul class="dropdown">
-          <li><a href="we-wont-go-back.html">WE WON’T GO BACK</a></li>
+          <li><a href="we-wont-go-back.html">WE’RE GOING BACK</a></li>
           <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
         </ul>
       </li>
@@ -156,8 +165,11 @@
     </ul>
   </nav>
 
+  <h1>WE’RE GOING BACK</h1>
+
+  <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
+
   <main>
-    <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
     <div class="slideshow-container">
       <div class="slides fade">
         <img src="images/Title_NDDD.jpg" alt="Title">
@@ -192,15 +204,15 @@
     </div>
 
     <div class="dots">
-      <span class="dot" onclick="currentSlide(1)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(2)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(3)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(4)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(5)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(6)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(7)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(8)">&#9733;</span>
-      <span class="dot" onclick="currentSlide(9)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
     </div>
   </main>
 
