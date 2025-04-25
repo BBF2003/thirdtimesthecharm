@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BBF2003 Studio Art</title>
+  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -12,6 +12,7 @@
       margin: 0;
       padding: 0;
       margin-left: 200px;
+      font-weight: bold; /* Make all text bold */
     }
 
     a, span {
@@ -20,6 +21,7 @@
       padding: 0.5rem;
       display: block;
       text-transform: uppercase;
+      font-weight: bold; /* Make links bold */
     }
 
     nav {
@@ -29,6 +31,7 @@
       background-color: #CCCCCC;
       padding: 1rem;
       width: 200px;
+      font-weight: bold; /* Make sidebar text bold */
     }
 
     .nav-container {
@@ -70,79 +73,25 @@
       color: blue;
     }
 
-    .hero-image {
-      max-width: 50%;
+    .image-container {
+      text-align: center;
+      margin-top: 50px; /* Lower the image */
+    }
+
+    .image-container img {
+      width: 60%; /* Resize image */
       height: auto;
-      display: block;
-      margin: 40px auto;
+      display: inline-block;
     }
 
     .blossom-name {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-top: 20px;
-      text-transform: uppercase;
-      text-decoration: underline;
-      color: blue;
-    }
-
-    .slideshow-container {
-      position: relative;
-      max-width: 80%;
-      margin: 2rem auto;
-    }
-
-    .slides {
-      display: none;
-    }
-
-    .slides img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .prev, .next {
-      cursor: pointer;
       position: absolute;
-      top: 50%;
-      padding: 8px;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      background-color: rgba(0,0,0,0.4);
-      border: none;
-      transform: translateY(-50%);
-      z-index: 10;
-      margin-left: -20px; /* Move arrows closer */
-    }
-
-    .prev {
-      left: 0;
-    }
-
-    .next {
-      right: 0;
-    }
-
-    .dots {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .dot {
-      height: 6px; /* Smaller dots */
-      width: 6px;  /* Smaller dots */
-      margin: 0 3px; /* Adjust spacing */
-      background-color: #888;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .active, .dot:hover {
-      background-color: #333;
+      right: 10%;
+      top: 70%; /* Place Blossom Bogen-Froese under the image */
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: blue;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -173,90 +122,12 @@
     </ul>
   </nav>
 
-  <h1>WE’RE GOING BACK</h1>
+  <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
 
-  <img src="https://raw.githubusercontent.com/BBF2003/thirdtimesthecharm/main/docs/images/Laughter_Car.jpg" alt="Laughter Car" class="hero-image">
-
-  <div class="blossom-name">Blossom Bogen-Froese</div>
-
-  <main>
-    <div class="slideshow-container">
-      <div class="slides fade">
-        <img src="images/Title_NDDD.jpg" alt="Title">
-      </div>
-      <div class="slides fade">
-        <img src="images/Entrance_NDDD.jpg" alt="Entrance">
-      </div>
-      <div class="slides fade">
-        <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
-      </div>
-      <div class="slides fade">
-        <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
-      </div>
-      <div class="slides fade">
-        <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
-      </div>
-      <div class="slides fade">
-        <img src="images/Lamps.jpg" alt="Lamps">
-      </div>
-      <div class="slides fade">
-        <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
-      </div>
-      <div class="slides fade">
-        <img src="images/Frame.jpg" alt="Frame">
-      </div>
-      <div class="slides fade">
-        <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
-      </div>
-
-      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-      <button class="next" onclick="plusSlides(1)">&#10095;</button>
-    </div>
-
-    <div class="dots">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-      <span class="dot" onclick="currentSlide(6)"></span>
-      <span class="dot" onclick="currentSlide(7)"></span>
-      <span class="dot" onclick="currentSlide(8)"></span>
-      <span class="dot" onclick="currentSlide(9)"></span>
-    </div>
-  </main>
-
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("slides");
-      let dots = document.getElementsByClassName("dot");
-
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-    }
-  </script>
+  <div class="image-container">
+    <img src="images/Title_NDDD.jpg" alt="Title Image">
+    <div class="blossom-name">Blossom Bogen-Froese</div> <!-- Blossom name under the image -->
+  </div>
+  
 </body>
 </html>
