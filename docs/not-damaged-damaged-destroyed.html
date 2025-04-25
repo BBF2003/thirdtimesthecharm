@@ -12,11 +12,13 @@
       margin: 0;
       padding: 0;
       margin-left: 200px;
+      text-transform: uppercase; /* Capitalize all text */
+      text-decoration: underline; /* Underline all text */
     }
 
     a, span {
       color: blue;
-      text-decoration: none;
+      text-decoration: underline; /* Underline links */
       padding: 0.5rem;
       display: block;
     }
@@ -64,7 +66,8 @@
       text-align: center;
       font-size: 1.2rem;
       margin-top: 2rem;
-      text-transform: uppercase;
+      text-transform: uppercase; /* Capitalize title */
+      text-decoration: underline; /* Underline title */
     }
 
     .slideshow-container {
@@ -78,9 +81,10 @@
     }
 
     .slides img {
-      width: 100%;
+      max-width: 60%;
       height: auto;
       display: block;
+      margin: 0 auto;
     }
 
     .prev, .next {
@@ -110,27 +114,26 @@
       margin-top: 1rem;
     }
 
+    /* Star shape and color */
     .dot {
-      height: 8px;
-      width: 8px;
-      margin: 0 4px;
-      background-color: #888;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.3s ease;
+      font-size: 30px;
+      margin: 0 10px;
+      color: #888;  /* Default color */
       cursor: pointer;
+      transition: color 0.3s ease;
     }
 
+    /* Active star and hover effect */
     .active, .dot:hover {
-      background-color: #333;
+      color: gold;  /* Yellow star */
     }
   </style>
 </head>
 <body>
   <nav>
     <ul class="nav-container">
-      <li class="nav-item"><a href="index.html">Home</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item"><a href="index.html">HOME</a></li>
+      <li class="nav-item"><a href="about.html">ABOUT</a></li>
       <li class="nav-item">
         <span>INSTALLATION</span>
         <ul class="dropdown">
@@ -189,15 +192,15 @@
     </div>
 
     <div class="dots">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-      <span class="dot" onclick="currentSlide(6)"></span>
-      <span class="dot" onclick="currentSlide(7)"></span>
-      <span class="dot" onclick="currentSlide(8)"></span>
-      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(1)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(2)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(3)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(4)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(5)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(6)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(7)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(8)">&#9733;</span>
+      <span class="dot" onclick="currentSlide(9)">&#9733;</span>
     </div>
   </main>
 
