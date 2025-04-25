@@ -52,29 +52,34 @@
     .nav-item:hover > .dropdown {
       display: block;
     }
-    main {
-      padding: 2rem;
-      margin-left: 220px;
-    }
     h1 {
       text-align: center;
       font-size: 1.5rem;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
     }
     .video-container {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
     }
     iframe {
       max-width: 100%;
-      height: auto;
+      width: 640px;
+      height: 360px;
+      border: none;
     }
   </style>
 </head>
 <body>
   <nav>
     <ul class="nav-container">
-      <li class="nav-item"><a href="index.html">Home</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html">About</a>
+      </li>
       <li class="nav-item">
         <span>INSTALLATION</span>
         <ul class="dropdown">
@@ -97,16 +102,15 @@
     </ul>
   </nav>
 
-  <main>
-    <h1>WE WON’T GO BACK</h1>
-    <div class="video-container">
-      <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/kEoxCMw50o8" 
-        title="We're Going Back" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
-  </main>
+  <h1>WE WON’T GO BACK</h1>
+
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/kEoxCMw50o8"
+      title="WE WON’T GO BACK Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
