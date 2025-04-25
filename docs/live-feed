@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LIVE FEED</title>
+  <style>
+    body {
+      background-color: #CCCCCC;
+      font-family: 'Courier New', Courier, monospace;
+      color: blue;
+      margin: 0;
+      padding: 0;
+      margin-left: 200px;
+      font-weight: bold;
+    }
+
+    a, span {
+      color: blue;
+      text-decoration: underline;
+      padding: 0.5rem;
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #CCCCCC;
+      padding: 1rem;
+      width: 200px;
+      font-weight: bold;
+    }
+
+    .nav-container {
+      display: block;
+    }
+
+    .nav-item {
+      position: relative;
+      margin-bottom: 1rem;
+      list-style: none;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      min-width: 200px;
+      z-index: 1000;
+    }
+
+    .dropdown li a {
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+
+    .nav-item:hover > .dropdown {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      color: blue;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-container">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item">
+        <span>INSTALLATION</span>
+        <ul class="dropdown">
+          <li><a href="we-wont-go-back.html">WE’RE GOING BACK</a></li>
+          <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <span>SCULPTURE</span>
+        <ul class="dropdown">
+          <li><a href="live-feed.html">LIVE FEED</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <span>VIDEO</span>
+        <ul class="dropdown">
+          <li><a href="glitch.html">GLITCH</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <h1>LIVE FEED</h1>
+
+</body>
+</html>
