@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>We Won’t Go Back</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WE WON’T GO BACK</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -45,9 +45,6 @@
       min-width: 200px;
       z-index: 1000;
     }
-    .dropdown li {
-      margin: 0;
-    }
     .dropdown li a {
       padding: 0.5rem 1rem;
       display: block;
@@ -56,12 +53,20 @@
       display: block;
     }
     main {
-      margin-left: 220px;
       padding: 2rem;
+      margin-left: 220px;
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .video-container {
+      text-align: center;
+    }
+    iframe {
+      max-width: 100%;
+      height: auto;
     }
   </style>
 </head>
@@ -71,30 +76,37 @@
       <li class="nav-item"><a href="index.html">Home</a></li>
       <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item">
-        <span>Installation</span>
+        <span>INSTALLATION</span>
         <ul class="dropdown">
-          <li><a href="we-wont-go-back.html">We Won’t Go Back</a></li>
-          <li><a href="not-damaged-damaged-destroyed.html">Not Damaged Damaged Destroyed</a></li>
+          <li><a href="we-wont-go-back.html">WE WON’T GO BACK</a></li>
+          <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
         </ul>
       </li>
       <li class="nav-item">
-        <span>Sculpture</span>
+        <span>SCULPTURE</span>
         <ul class="dropdown">
-          <li><a href="live-feed.html">Live Feed</a></li>
+          <li><a href="live-feed.html">LIVE FEED</a></li>
         </ul>
       </li>
       <li class="nav-item">
-        <span>Video</span>
+        <span>VIDEO</span>
         <ul class="dropdown">
-          <li><a href="glitch.html">Glitch</a></li>
+          <li><a href="glitch.html">GLITCH</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 
   <main>
-    <h1>We Won’t Go Back</h1>
-    <p>[Project description, image, or content goes here]</p>
+    <h1>WE WON’T GO BACK</h1>
+    <div class="video-container">
+      <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/kEoxCMw50o8" 
+        title="We're Going Back" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
   </main>
 </body>
 </html>
