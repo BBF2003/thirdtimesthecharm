@@ -75,24 +75,61 @@
       text-transform: uppercase;
     }
 
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: flex-start;
+    .slideshow-container {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .image-row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: nowrap;
+    .slide {
+      display: none;
     }
 
-    .image-row img {
-      width: 300px;
+    .slide img {
+      width: 100%;
       height: auto;
-      object-fit: cover;
       display: block;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 1rem;
+      margin-top: -22px;
+      color: blue;
+      font-weight: bold;
+      font-size: 1.5rem;
+      user-select: none;
+      background: #CCCCCC;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: blue;
     }
   </style>
 </head>
@@ -126,32 +163,61 @@
   <main>
     <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
 
-    <div class="gallery">
-      <!-- Row 1: Two Images -->
-      <div class="image-row">
-        <img src="images/Title_NDDD.jpg" alt="Title Image">
-        <img src="images/Entrance_NDDD.jpg" alt="Entrance Image">
-      </div>
+    <div class="slideshow-container">
+      <div class="slide"><img src="images/Title_NDDD.jpg" alt="Title"></div>
+      <div class="slide"><img src="images/Entrance_NDDD.jpg" alt="Entrance"></div>
+      <div class="slide"><img src="images/Boardwalk_3.jpg" alt="Boardwalk 3"></div>
+      <div class="slide"><img src="images/Boardwalk_2.jpg" alt="Boardwalk 2"></div>
+      <div class="slide"><img src="images/Boardwalk_1.jpg" alt="Boardwalk 1"></div>
+      <div class="slide"><img src="images/Lamps.jpg" alt="Lamps"></div>
+      <div class="slide"><img src="images/Christmas_decorations.jpg" alt="Christmas decorations"></div>
+      <div class="slide"><img src="images/Frame.jpg" alt="Frame"></div>
+      <div class="slide"><img src="images/Air_Conditioner.jpg" alt="Air Conditioner"></div>
 
-      <!-- Row 2: Three Images -->
-      <div class="image-row">
-        <img src="images/Boardwalk_3.jpg" alt="Boardwalk 3">
-        <img src="images/Boardwalk_2.jpg" alt="Boardwalk 2">
-        <img src="images/Boardwalk_1.jpg" alt="Boardwalk 1">
-      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
 
-      <!-- Row 3: Three Images -->
-      <div class="image-row">
-        <img src="images/Lamps.jpg" alt="Lamps">
-        <img src="images/Christmas_decorations.jpg" alt="Christmas Decorations">
-        <img src="images/Frame.jpg" alt="Frame">
-      </div>
-
-      <!-- Row 4: One Image -->
-      <div class="image-row">
-        <img src="images/Air_Conditioner.jpg" alt="Air Conditioner">
-      </div>
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
     </div>
   </main>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
 </body>
 </html>
