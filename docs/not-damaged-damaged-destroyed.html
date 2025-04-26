@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Not Damaged / Damaged / Destroyed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
   <style>
-    /* Body styling */
     body {
       background-color: #CCCCCC;
       font-family: 'Courier New', Courier, monospace;
@@ -16,7 +15,15 @@
       font-weight: bold;
     }
 
-    /* Navigation */
+    a, span {
+      color: blue;
+      text-decoration: underline;
+      padding: 0.5rem;
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
     nav {
       position: absolute;
       left: 0;
@@ -24,7 +31,6 @@
       background-color: #CCCCCC;
       padding: 1rem;
       width: 200px;
-      font-weight: bold;
     }
 
     .nav-container {
@@ -57,26 +63,19 @@
       display: block;
     }
 
-    /* Sidebar links and navigation */
-    a, span {
-      color: blue;
-      text-decoration: underline; /* Ensures the text is underlined */
-      padding: 0.5rem;
-      display: block;
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 2rem;
       text-transform: uppercase;
-      font-weight: bold;
+      color: blue;
+      text-decoration: none;
     }
 
-    .nav-item span {
-      text-decoration: none; /* Remove underline from dropdown titles */
-    }
-
-    /* Slideshow styles */
     .slideshow-container {
       position: relative;
-      max-width: 100%;
+      max-width: 80%;
       margin: 2rem auto;
-      text-align: center;
     }
 
     .slides {
@@ -103,13 +102,8 @@
       z-index: 10;
     }
 
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
     .dots {
       text-align: center;
@@ -160,106 +154,62 @@
     </ul>
   </nav>
 
-  <h1 style="text-align:center;">Not Damaged / Damaged / Destroyed</h1>
+  <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
 
-  <!-- Slideshow container -->
   <div class="slideshow-container">
+    <div class="slides"><img src="images/Title_NDDD.jpg" alt="Slide 1"></div>
+    <div class="slides"><img src="images/Entrance_NDDD.jpg" alt="Slide 2"></div>
+    <div class="slides"><img src="images/Boardwalk_1.jpg" alt="Slide 3"></div>
+    <div class="slides"><img src="images/Boardwalk_2.jpg" alt="Slide 4"></div>
+    <div class="slides"><img src="images/Boardwalk_3.jpg" alt="Slide 5"></div>
+    <div class="slides"><img src="images/Lamps.jpg" alt="Slide 6"></div>
+    <div class="slides"><img src="images/Christmas_decorations.jpg" alt="Slide 7"></div>
+    <div class="slides"><img src="images/Frame.jpg" alt="Slide 8"></div>
+    <div class="slides"><img src="images/Air_Conditioner.jpg" alt="Slide 9"></div>
 
-    <!-- Slide 1 -->
-    <div class="slides fade">
-      <img src="docs/images/Title_NDDD.jpg" alt="Title Image">
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="slides fade">
-      <img src="docs/images/Entrance_NDDD.jpg" alt="Entrance Image">
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_1.jpg" alt="Boardwalk Image 1">
-    </div>
-
-    <!-- Slide 4 -->
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_2.jpg" alt="Boardwalk Image 2">
-    </div>
-
-    <!-- Slide 5 -->
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_3.jpg" alt="Boardwalk Image 3">
-    </div>
-
-    <!-- Slide 6 -->
-    <div class="slides fade">
-      <img src="docs/images/Lamps.jpg" alt="Lamps Image">
-    </div>
-
-    <!-- Slide 7 -->
-    <div class="slides fade">
-      <img src="docs/images/Christmas_decorations.jpg" alt="Christmas Decorations">
-    </div>
-
-    <!-- Slide 8 -->
-    <div class="slides fade">
-      <img src="docs/images/Frame.jpg" alt="Frame Image">
-    </div>
-
-    <!-- Slide 9 -->
-    <div class="slides fade">
-      <img src="docs/images/Air_Conditioner.jpg" alt="Air Conditioner Image">
-    </div>
-
-    <!-- Navigation -->
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
+    <button class="prev" onclick="plusSlides(-1)">❮</button>
+    <button class="next" onclick="plusSlides(1)">❯</button>
   </div>
 
   <div class="dots">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
   </div>
 
   <script>
-    var slideIndex = 0;
-    showSlides();
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-    function showSlides() {
-      var slides = document.getElementsByClassName("slides");
-      var dots = document.getElementsByClassName("dot");
-      for (var i = 0; i < slides.length; i++) {
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      const slides = document.getElementsByClassName("slides");
+      const dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      for (var j = 0; j < dots.length; j++) {
-        dots[j].className = dots[j].className.replace(" active", "");
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
       }
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
-
-    // Slide controls
-    var prev = document.querySelector(".prev");
-    var next = document.querySelector(".next");
-
-    prev.addEventListener("click", function() {
-      slideIndex -= 2;
-      showSlides();
-    });
-
-    next.addEventListener("click", function() {
-      showSlides();
-    });
   </script>
 
 </body>
