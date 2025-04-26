@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HOME PAGE</title>
   <style>
-    /* Body styling */
     body {
       background-color: #CCCCCC;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: monospace;
       color: blue;
       margin: 0;
       padding: 0;
@@ -16,7 +15,15 @@
       font-weight: bold;
     }
 
-    /* Navigation */
+    a, span {
+      color: blue;
+      text-decoration: underline;
+      padding: 0.5rem;
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
     nav {
       position: absolute;
       left: 0;
@@ -24,7 +31,6 @@
       background-color: #CCCCCC;
       padding: 1rem;
       width: 200px;
-      font-weight: bold;
     }
 
     .nav-container {
@@ -57,99 +63,37 @@
       display: block;
     }
 
-    /* Sidebar links and navigation */
-    a, span {
-      color: blue;
-      text-decoration: underline; /* Ensures the text is underlined */
-      padding: 0.5rem;
-      display: block;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .nav-item span {
-      text-decoration: none; /* Remove underline from dropdown titles */
-    }
-
-    /* Slideshow styles */
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: 2rem auto;
+    h1 {
       text-align: center;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: blue;
     }
 
-    .slides {
-      display: none;
+    .image-container {
+      text-align: center;
+      margin-top: 50px;
     }
 
-    .slides img {
-      width: 100%;
+    .image-container img {
+      width: 50%;
       height: auto;
       display: block;
-    }
-
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      padding: 8px;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      background-color: rgba(0,0,0,0.4);
-      border: none;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
-
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
-
-    .dots {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .dot {
-      height: 6px;
-      width: 6px;
-      margin: 0 4px;
-      background-color: #888;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .active, .dot:hover {
-      background-color: #333;
-    }
-
-    /* Image on Home Page */
-    .home-image {
-      width: 80%;
-      max-width: 600px;
-      margin: 20px auto;
-      display: block;
+      margin: 0 auto 30px auto;
     }
   </style>
 </head>
 <body>
-
   <nav>
     <ul class="nav-container">
-      <li class="nav-item"><a href="index.html">Home</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item"><a href="index.html">HOME</a></li>
+      <li class="nav-item"><a href="about.html">ABOUT</a></li>
       <li class="nav-item">
         <span>INSTALLATION</span>
         <ul class="dropdown">
-          <li><a href="we-wont-go-back.html">WE’RE GOING BACK</a></li>
+          <li><a href="we-wont-go-back.html">WE'RE GOING BACK</a></li>
           <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
         </ul>
       </li>
@@ -168,98 +112,9 @@
     </ul>
   </nav>
 
-  <h1 style="text-align:center;">Welcome to My Installation</h1>
-
-  <!-- Image on Home Page -->
-  <img class="home-image" src="docs/images/Laughter_Car.jpg" alt="Artwork Image">
-
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
-
-    <!-- Slide 1 -->
-    <div class="slides fade">
-      <img src="docs/images/Title_NDDD.jpg" alt="Title Image">
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="slides fade">
-      <img src="docs/images/Entrance_NDDD.jpg" alt="Entrance Image">
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_1.jpg" alt="Boardwalk Image 1">
-    </div>
-
-    <!-- Slide 4 -->
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_2.jpg" alt="Boardwalk Image 2">
-    </div>
-
-    <!-- Slide 5 -->
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_3.jpg" alt="Boardwalk Image 3">
-    </div>
-
-    <!-- Slide 6 -->
-    <div class="slides fade">
-      <img src="docs/images/Lamps.jpg" alt="Lamps Image">
-    </div>
-
-    <!-- Slide 7 -->
-    <div class="slides fade">
-      <img src="docs/images/Christmas_decorations.jpg" alt="Christmas Decorations">
-    </div>
-
-    <!-- Navigation -->
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
+  <div class="image-container">
+    <img src="docs/images/Laughter_Car.jpg" alt="Laughter Image" />
   </div>
-
-  <div class="dots">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-
-  <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      var slides = document.getElementsByClassName("slides");
-      var dots = document.getElementsByClassName("dot");
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      for (var j = 0; j < dots.length; j++) {
-        dots[j].className = dots[j].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-
-    // Slide controls
-    var prev = document.querySelector(".prev");
-    var next = document.querySelector(".next");
-
-    prev.addEventListener("click", function() {
-      slideIndex -= 2;
-      showSlides();
-    });
-
-    next.addEventListener("click", function() {
-      showSlides();
-    });
-  </script>
 
 </body>
 </html>
