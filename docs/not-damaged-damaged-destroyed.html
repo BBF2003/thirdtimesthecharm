@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
+  <title>Not Damaged / Damaged / Destroyed</title>
   <style>
     /* Body styling */
     body {
@@ -57,9 +57,10 @@
       display: block;
     }
 
+    /* Sidebar links and navigation */
     a, span {
       color: blue;
-      text-decoration: underline;
+      text-decoration: underline; /* Ensures the text is underlined */
       padding: 0.5rem;
       display: block;
       text-transform: uppercase;
@@ -67,7 +68,7 @@
     }
 
     .nav-item span {
-      text-decoration: none;
+      text-decoration: none; /* Remove underline from dropdown titles */
     }
 
     /* Slideshow styles */
@@ -159,6 +160,8 @@
     </ul>
   </nav>
 
+  <h1 style="text-align:center;">Not Damaged / Damaged / Destroyed</h1>
+
   <!-- Slideshow container -->
   <div class="slideshow-container">
 
@@ -194,7 +197,7 @@
 
     <!-- Slide 7 -->
     <div class="slides fade">
-      <img src="docs/images/Christmas_decorations.jpg" alt="Christmas Decorations Image">
+      <img src="docs/images/Christmas_decorations.jpg" alt="Christmas Decorations">
     </div>
 
     <!-- Slide 8 -->
@@ -207,54 +210,56 @@
       <img src="docs/images/Air_Conditioner.jpg" alt="Air Conditioner Image">
     </div>
 
-    <!-- Navigation arrows -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+    <!-- Navigation -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
   </div>
 
   <div class="dots">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-    <span class="dot" onclick="currentSlide(7)"></span>
-    <span class="dot" onclick="currentSlide(8)"></span>
-    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
 
   <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    var slideIndex = 0;
+    showSlides();
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let slides = document.getElementsByClassName("slides");
-      let dots = document.getElementsByClassName("dot");
-
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-
-      for (let i = 0; i < slides.length; i++) {
+    function showSlides() {
+      var slides = document.getElementsByClassName("slides");
+      var dots = document.getElementsByClassName("dot");
+      for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-
-      for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
       }
-
+      for (var j = 0; j < dots.length; j++) {
+        dots[j].className = dots[j].className.replace(" active", "");
+      }
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
+
+    // Slide controls
+    var prev = document.querySelector(".prev");
+    var next = document.querySelector(".next");
+
+    prev.addEventListener("click", function() {
+      slideIndex -= 2;
+      showSlides();
+    });
+
+    next.addEventListener("click", function() {
+      showSlides();
+    });
   </script>
 
 </body>
