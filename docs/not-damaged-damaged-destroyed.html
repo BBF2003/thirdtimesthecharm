@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Not Damaged / Damaged / Destroyed</title>
+  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
   <style>
     body {
       background-color: #CCCCCC;
@@ -31,7 +31,6 @@
       background-color: #CCCCCC;
       padding: 1rem;
       width: 200px;
-      font-weight: bold;
     }
 
     .nav-container {
@@ -103,13 +102,8 @@
       z-index: 10;
     }
 
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
     .dots {
       text-align: center;
@@ -133,6 +127,7 @@
   </style>
 </head>
 <body>
+
   <nav>
     <ul class="nav-container">
       <li class="nav-item"><a href="index.html">Home</a></li>
@@ -159,59 +154,61 @@
     </ul>
   </nav>
 
-  <h1>Not Damaged / Damaged / Destroyed</h1>
+  <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
 
   <div class="slideshow-container">
-    <div class="slides">
-      <img src="docs/images/image1.jpg" alt="Image 1" />
-    </div>
-    <div class="slides">
-      <img src="docs/images/image2.jpg" alt="Image 2" />
-    </div>
-    <div class="slides">
-      <img src="docs/images/image3.jpg" alt="Image 3" />
-    </div>
+    <div class="slides"><img src="images/Title_NDDD.jpg" alt="Slide 1"></div>
+    <div class="slides"><img src="images/Entrance_NDDD.jpg" alt="Slide 2"></div>
+    <div class="slides"><img src="images/Boardwalk_1.jpg" alt="Slide 3"></div>
+    <div class="slides"><img src="images/Boardwalk_2.jpg" alt="Slide 4"></div>
+    <div class="slides"><img src="images/Boardwalk_3.jpg" alt="Slide 5"></div>
+    <div class="slides"><img src="images/Lamps.jpg" alt="Slide 6"></div>
+    <div class="slides"><img src="images/Christmas_decorations.jpg" alt="Slide 7"></div>
+    <div class="slides"><img src="images/Frame.jpg" alt="Slide 8"></div>
+    <div class="slides"><img src="images/Air_Conditioner.jpg" alt="Slide 9"></div>
 
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <button class="prev" onclick="plusSlides(-1)">❮</button>
+    <button class="next" onclick="plusSlides(1)">❯</button>
   </div>
 
-  <!-- Dots/circles for navigation -->
   <div class="dots">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
   </div>
 
   <script>
     let slideIndex = 1;
     showSlides(slideIndex);
 
-    // Next/previous controls
     function plusSlides(n) {
       showSlides(slideIndex += n);
     }
 
-    // Thumbnail image controls
     function currentSlide(n) {
       showSlides(slideIndex = n);
     }
 
     function showSlides(n) {
       let i;
-      let slides = document.getElementsByClassName("slides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
+      const slides = document.getElementsByClassName("slides");
+      const dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
     }
   </script>
 
