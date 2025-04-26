@@ -1,158 +1,221 @@
-body {
-  background-color: #CCCCCC;
-  font-family: 'Courier New', Courier, monospace;
-  color: blue;
-  margin: 0;
-  padding: 0;
-  margin-left: 200px;
-  font-weight: bold;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
+  <style>
+    body {
+      background-color: #CCCCCC;
+      font-family: 'Courier New', Courier, monospace;
+      color: blue;
+      margin: 0;
+      padding: 0;
+      margin-left: 200px;
+      font-weight: bold;
+    }
 
-a, span {
-  color: blue;
-  text-decoration: underline;
-  padding: 0.5rem;
-  display: block;
-  text-transform: uppercase;
-  font-weight: bold;
-}
+    a, span {
+      color: blue;
+      text-decoration: underline;
+      padding: 0.5rem;
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
 
-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #CCCCCC;
-  padding: 1rem;
-  width: 200px;
-}
+    nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #CCCCCC;
+      padding: 1rem;
+      width: 200px;
+    }
 
-.nav-container {
-  display: block;
-}
+    .nav-container {
+      display: block;
+    }
 
-.nav-item {
-  position: relative;
-  margin-bottom: 1rem;
-  list-style: none;
-}
+    .nav-item {
+      position: relative;
+      margin-bottom: 1rem;
+      list-style: none;
+    }
 
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  min-width: 200px;
-  z-index: 1000;
-}
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      min-width: 200px;
+      z-index: 1000;
+    }
 
-.dropdown li a {
-  padding: 0.5rem 1rem;
-  display: block;
-}
+    .dropdown li a {
+      padding: 0.5rem 1rem;
+      display: block;
+    }
 
-.nav-item:hover > .dropdown {
-  display: block;
-}
+    .nav-item:hover > .dropdown {
+      display: block;
+    }
 
-h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  text-transform: uppercase;
-  color: blue;
-  text-decoration: none;
-}
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      color: blue;
+      text-decoration: none;
+    }
 
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  max-width: 90%;
-  margin: 2rem auto;
-}
+    .slideshow-container {
+      position: relative;
+      width: 600px;
+      max-width: 90%;
+      margin: 2rem auto;
+    }
 
-.slides {
-  display: none;
-}
+    .slides {
+      display: none;
+    }
 
-.slides img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    .slides img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  background-color: rgba(0,0,0,0.4);
-  border: none;
-  transform: translateY(-50%);
-  z-index: 10;
-}
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: rgba(0,0,0,0.4);
+      border: none;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
-.dots {
-  text-align: center;
-  margin-top: 1rem;
-}
+    .dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
 
-.dot {
-  height: 6px;
-  width: 6px;
-  margin: 0 4px;
-  background-color: #888;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
+    .dot {
+      height: 6px;
+      width: 6px;
+      margin: 0 4px;
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
 
-.active, .dot:hover {
-  background-color: #333;
-}
+    .active, .dot:hover {
+      background-color: #333;
+    }
 
-.text-section {
-  width: 100%;
-  margin: 0;
-  padding: 0 1rem;
-  text-align: left;
-  color: black;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+    .text-section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 20px;
+      text-align: left;
+      color: black;
+      font-size: 1rem;
+      line-height: 1.6;
+      background-color: white;
+    }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .slideshow-container {
-    width: 100%;
-    max-width: 100%;
-  }
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      body {
+        margin-left: 0;
+      }
 
-  h1 {
-    font-size: 1.2rem;
-  }
+      .slideshow-container {
+        width: 100%;
+        max-width: 100%;
+      }
 
-  .text-section {
-    font-size: 14px;
-    padding: 0 0.5rem;
-  }
+      .text-section {
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
 
-  .nav-container {
-    width: 100%;
-    margin: 0;
-  }
+  <nav>
+    <ul class="nav-container">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item">
+        <span>INSTALLATION</span>
+        <ul class="dropdown">
+          <li><a href="we-wont-go-back.html">WE’RE GOING BACK</a></li>
+          <li><a href="not-damaged-damaged-destroyed.html">NOT DAMAGED / DAMAGED / DESTROYED</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <span>SCULPTURE</span>
+        <ul class="dropdown">
+          <li><a href="live-feed.html">LIVE FEED</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <span>VIDEO</span>
+        <ul class="dropdown">
+          <li><a href="glitch.html">PANASONIC CAMCORDER GLITCH</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-  nav {
-    position: static;
-    width: 100%;
-  }
-}
+  <h1>NOT DAMAGED / DAMAGED / DESTROYED</h1>
+
+  <div class="slideshow-container">
+    <div class="slides"><img src="images/Title_NDDD.jpg" alt="Slide 1"></div>
+    <div class="slides"><img src="images/Entrance_NDDD.jpg" alt="Slide 2"></div>
+    <div class="slides"><img src="images/Boardwalk_1.jpg" alt="Slide 3"></div>
+    <div class="slides"><img src="images/Boardwalk_2.jpg" alt="Slide 4"></div>
+    <div class="slides"><img src="images/Boardwalk_3.jpg" alt="Slide 5"></div>
+    <div class="slides"><img src="images/Lamps.jpg" alt="Slide 6"></div>
+    <div class="slides"><img src="images/Christmas_decorations.jpg" alt="Slide 7"></div>
+    <div class="slides"><img src="images/Frame.jpg" alt="Slide 8"></div>
+    <div class="slides"><img src="images/Air_Conditioner.jpg" alt="Slide 9"></div>
+
+    <button class="prev" onclick="plusSlides(-1)">❮</button>
+    <button class="next" onclick="plusSlides(1)">❯</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+  </div>
+
+  <div class="text-section">
+    <p>In my dreams, I try to warn people of an inevitable disaster, but they never believe me. When I wake up, I can never remember my message, only the sensation of impending doom. I think about how the world ends, not in fire or water, but in ash, dust, and silence. When I imagine the end, it is after the dust has settled. I walk through the streets and it's familiar to me but I can't orient myself. It's quiet. I think, “There are supposed to be bells ringing when the world is ending.” My work is most informed by my lack of control. I make many accidents and mistakes. I try to engage with this, rather than ignore it. I’m interested in how materials resist or reshape my intentions, and how my behaviour contributes to transformation. I find a lot of meaning in disruption, where objects defy our expectations of them and behave in ways unfamiliar to us. I sense a presence beneath me, underground, waiting for us to sink into it, to be absorbed. It feels patient. And yet, the end has already come and passed, and I am still here. Sometimes I feel like I’ve turned into an animal– hyper-aware, running from an invisible force. That discomfort is important for my work: the quiet knowledge that something irreversible has already happened.</p>
+  </div>
+
+  <script>
+    let slideIndex = 1;
