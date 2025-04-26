@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOME PAGE</title>
+  <title>NOT DAMAGED / DAMAGED / DESTROYED</title>
   <style>
     /* Body styling */
     body {
@@ -14,18 +14,6 @@
       padding: 0;
       margin-left: 200px;
       font-weight: bold;
-    }
-
-    /* Home page image size */
-    .home-image-container {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .home-image-container img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 30px;
     }
 
     /* Navigation */
@@ -69,7 +57,6 @@
       display: block;
     }
 
-    /* Sidebar Text Styling */
     a, span {
       color: blue;
       text-decoration: underline;
@@ -79,14 +66,73 @@
       font-weight: bold;
     }
 
-    /* Remove underline from nav items */
     .nav-item span {
       text-decoration: none;
     }
 
+    /* Slideshow styles */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: rgba(0,0,0,0.4);
+      border: none;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 6px;
+      width: 6px;
+      margin: 0 4px;
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .active, .dot:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
+
   <nav>
     <ul class="nav-container">
       <li class="nav-item"><a href="index.html">Home</a></li>
@@ -113,10 +159,103 @@
     </ul>
   </nav>
 
-  <!-- Home page image -->
-  <div class="home-image-container">
-    <img src="docs/images/Laughter_Car.jpg" alt="Laughter Image" />
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Slide 1 -->
+    <div class="slides fade">
+      <img src="docs/images/Title_NDDD.jpg" alt="Title Image">
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slides fade">
+      <img src="docs/images/Entrance_NDDD.jpg" alt="Entrance Image">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slides fade">
+      <img src="docs/images/Boardwalk_1.jpg" alt="Boardwalk Image 1">
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slides fade">
+      <img src="docs/images/Boardwalk_2.jpg" alt="Boardwalk Image 2">
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slides fade">
+      <img src="docs/images/Boardwalk_3.jpg" alt="Boardwalk Image 3">
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slides fade">
+      <img src="docs/images/Lamps.jpg" alt="Lamps Image">
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slides fade">
+      <img src="docs/images/Christmas_decorations.jpg" alt="Christmas Decorations Image">
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slides fade">
+      <img src="docs/images/Frame.jpg" alt="Frame Image">
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slides fade">
+      <img src="docs/images/Air_Conditioner.jpg" alt="Air Conditioner Image">
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
   </div>
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
 
 </body>
 </html>
