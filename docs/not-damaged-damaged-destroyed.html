@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Not Damaged / Damaged / Destroyed</title>
+  <title>HOME PAGE</title>
   <style>
     /* Body styling */
     body {
@@ -16,80 +16,74 @@
       font-weight: bold;
     }
 
-    /* Slideshow container */
-    .slideshow-container {
-      position: relative;
-      max-width: 1100px; /* Adjust this to match your video size */
-      margin: 0 auto;
+    /* Home page image size */
+    .home-image-container {
       text-align: center;
-      overflow: hidden; /* Hide any overflowing images */
+      margin-top: 50px;
     }
 
-    /* Hide all images by default */
-    .slides {
-      display: none;
+    .home-image-container img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px;
     }
 
-    /* Adjust image size to match the video size */
-    .slide-image {
-      width: 100%; /* Make sure the images scale to the container's width */
-      height: auto; /* Maintain the aspect ratio */
-      max-height: 600px; /* Control the maximum height to avoid too large images */
-      object-fit: cover; /* Ensure the image fits well in the container */
-    }
-
-    /* Optional: Add fade animation for transitions */
-    .fade {
-      animation: fadeEffect 1.5s ease-in-out;
-    }
-
-    @keyframes fadeEffect {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Style for the "Next" and "Previous" buttons */
-    .prev, .next {
-      cursor: pointer;
+    /* Navigation */
+    nav {
       position: absolute;
-      top: 50%;
-      padding: 16px;
-      color: white;
+      left: 0;
+      top: 0;
+      background-color: #CCCCCC;
+      padding: 1rem;
+      width: 200px;
       font-weight: bold;
-      font-size: 18px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      transform: translateY(-50%);
-      z-index: 10;
     }
 
-    .prev {
-      left: 10px; /* Move arrows closer to the left edge */
+    .nav-container {
+      display: block;
     }
 
-    .next {
-      right: 10px; /* Move arrows closer to the right edge */
+    .nav-item {
+      position: relative;
+      margin-bottom: 1rem;
+      list-style: none;
     }
 
-    /* Style for dots under the slideshow */
-    .dots {
-      text-align: center;
-      padding-top: 20px;
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      min-width: 200px;
+      z-index: 1000;
     }
 
-    .dot {
-      height: 10px; /* Size of the dots */
-      width: 10px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
+    .dropdown li a {
+      padding: 0.5rem 1rem;
+      display: block;
     }
 
-    .active, .dot:hover {
-      background-color: #717171;
+    .nav-item:hover > .dropdown {
+      display: block;
     }
+
+    /* Sidebar Text Styling */
+    a, span {
+      color: blue;
+      text-decoration: underline;
+      padding: 0.5rem;
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* Remove underline from nav items */
+    .nav-item span {
+      text-decoration: none;
+    }
+
   </style>
 </head>
 <body>
@@ -119,98 +113,10 @@
     </ul>
   </nav>
 
-  <!-- Slideshow container with images -->
-  <div class="slideshow-container">
-    <div class="slides fade">
-      <img src="docs/images/Title_NDDD.jpg" alt="Title Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Entrance_NDDD.jpg" alt="Entrance Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_1.jpg" alt="Boardwalk Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_2.jpg" alt="Boardwalk Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Boardwalk_3.jpg" alt="Boardwalk Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Lamps.jpg" alt="Lamps Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Christmas_decorations.jpg" alt="Christmas Decorations Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Frame.jpg" alt="Frame Image" class="slide-image" />
-    </div>
-    <div class="slides fade">
-      <img src="docs/images/Air_Conditioner.jpg" alt="Air Conditioner Image" class="slide-image" />
-    </div>
-
-    <!-- Previous and Next buttons for navigation -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Dots for slide indicators -->
-    <div class="dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
+  <!-- Home page image -->
+  <div class="home-image-container">
+    <img src="docs/images/Laughter_Car.jpg" alt="Laughter Image" />
   </div>
 
-  <script>
-    // JavaScript for the slideshow functionality
-    let slideIndex = 0;
-
-    function showSlides() {
-      let slides = document.getElementsByClassName("slides");
-      let dots = document.getElementsByClassName("dot");
-
-      // Hide all slides
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      // Remove the 'active' class from all dots
-      for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      // Show the current slide and activate the corresponding dot
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-
-      // Change slide every 5 seconds
-      setTimeout(showSlides, 5000);
-    }
-
-    function plusSlides(n) {
-      clearTimeout(); // Stop the automatic slideshow
-      slideIndex += n;
-      if (slideIndex > document.getElementsByClassName("slides").length) {
-        slideIndex = 1;
-      } else if (slideIndex < 1) {
-        slideIndex = document.getElementsByClassName("slides").length;
-      }
-      showSlides();
-    }
-
-    // Initialize the slideshow
-    showSlides();
-  </script>
 </body>
 </html>
