@@ -7,7 +7,7 @@
   <style>
     body {
       background-color: #CCCCCC;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New', Courier, monospace; /* Ensures the font is the same */
       color: blue;
       margin: 0;
       padding: 0;
@@ -74,8 +74,8 @@
 
     .slideshow-container {
       position: relative;
-      width: 600px;
-      max-width: 90%;
+      width: 80%; /* Keep the previous size */
+      max-width: 1200px; /* Max width */
       margin: 2rem auto;
     }
 
@@ -126,33 +126,13 @@
       background-color: #333;
     }
 
-    .text-section {
-      width: 100%;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 20px;
-      text-align: left;
+    .text-container {
       color: black;
-      font-size: 1rem;
-      line-height: 1.6;
-      background-color: white;
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      body {
-        margin-left: 0;
-      }
-
-      .slideshow-container {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .text-section {
-        padding: 10px;
-        font-size: 0.9rem;
-      }
+      font-family: 'Courier New', Courier, monospace; /* Same font as body */
+      font-weight: normal;
+      margin: 2rem auto;
+      width: 80%; /* Stretch to the right */
+      text-align: left;
     }
   </style>
 </head>
@@ -213,7 +193,7 @@
     <span class="dot" onclick="currentSlide(9)"></span>
   </div>
 
-  <div class="text-section">
+  <div class="text-container">
     <p>In my dreams, I try to warn people of an inevitable disaster, but they never believe me. When I wake up, I can never remember my message, only the sensation of impending doom. I think about how the world ends, not in fire or water, but in ash, dust, and silence. When I imagine the end, it is after the dust has settled. I walk through the streets and it's familiar to me but I can't orient myself. It's quiet. I think, “There are supposed to be bells ringing when the world is ending.” My work is most informed by my lack of control. I make many accidents and mistakes. I try to engage with this, rather than ignore it. I’m interested in how materials resist or reshape my intentions, and how my behaviour contributes to transformation. I find a lot of meaning in disruption, where objects defy our expectations of them and behave in ways unfamiliar to us. I sense a presence beneath me, underground, waiting for us to sink into it, to be absorbed. It feels patient. And yet, the end has already come and passed, and I am still here. Sometimes I feel like I’ve turned into an animal– hyper-aware, running from an invisible force. That discomfort is important for my work: the quiet knowledge that something irreversible has already happened.</p>
   </div>
 
