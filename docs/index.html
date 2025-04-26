@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HOME PAGE</title>
   <style>
+    /* Body styling */
     body {
       background-color: #CCCCCC;
       font-family: 'Courier New', Courier, monospace;
-      color: blue; /* Make text blue */
+      color: blue;
       margin: 0;
       padding: 0;
       margin-left: 200px;
-      font-weight: bold; /* Make all text bold */
+      font-weight: bold;
     }
 
-    a, span {
-      color: blue;
-      text-decoration: underline;
-      padding: 0.5rem;
-      display: block;
-      text-transform: uppercase;
-      font-weight: bold; /* Make links bold */
+    /* Home page image size */
+    .home-image-container {
+      text-align: center;
+      margin-top: 50px;
     }
 
+    .home-image-container img {
+      max-width: 120%; /* Increase the image size */
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    /* Navigation */
     nav {
       position: absolute;
       left: 0;
@@ -31,7 +36,7 @@
       background-color: #CCCCCC;
       padding: 1rem;
       width: 200px;
-      font-weight: bold; /* Make sidebar text bold */
+      font-weight: bold;
     }
 
     .nav-container {
@@ -63,85 +68,6 @@
     .nav-item:hover > .dropdown {
       display: block;
     }
-
-    h1 {
-      text-align: center;
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      text-transform: uppercase;
-      text-decoration: underline;
-      color: blue;
-    }
-
-    .video-container {
-      text-align: center;
-      margin-top: 50px; /* Adjust position if needed */
-    }
-
-    .video-container video {
-      width: 110%; /* Make the video 10% bigger */
-      height: auto;
-      display: inline-block;
-    }
-
-    /* Slideshow style adjustments */
-    .slideshow-container {
-      position: relative;
-      max-width: 80%;
-      margin: 2rem auto;
-    }
-
-    .slides {
-      display: none;
-    }
-
-    .slides img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      padding: 8px;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      background-color: rgba(0,0,0,0.4);
-      border: none;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
-
-    .prev {
-      left: 10px; /* Move arrows closer to image */
-    }
-
-    .next {
-      right: 10px; /* Move arrows closer to image */
-    }
-
-    .dots {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .dot {
-      height: 6px; /* Make circles smaller */
-      width: 6px; /* Make circles smaller */
-      margin: 0 4px;
-      background-color: #888;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .active, .dot:hover {
-      background-color: #333;
-    }
   </style>
 </head>
 <body>
@@ -171,8 +97,9 @@
     </ul>
   </nav>
 
-  <div style="text-align: center; margin-top: 50px;">
-    <img src="images/Laughter_Car.jpg" alt="Laughter Image" style="max-width: 50%; height: auto; margin-bottom: 30px;" />
+  <!-- Home page image -->
+  <div class="home-image-container">
+    <img src="docs/images/Laughter_Car.jpg" alt="Laughter Image" />
   </div>
 
 </body>
