@@ -68,10 +68,7 @@ nav ul {
   z-index: 1000;
 }
 
-.nav-item:hover > .dropdown,
-.nav-item:focus-within > .dropdown {
-  display: block;
-}
+
 
 @media (max-width: 700px) {
   body {
