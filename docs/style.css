@@ -151,8 +151,8 @@ h1 {
 
 .home-image {
   display: block;
-  max-width: 100%;
-  max-height: calc(100vh - 6rem);
+  max-width: min(100%, 640px);
+  max-height: 60vh;
   object-fit: contain;
 }
 
