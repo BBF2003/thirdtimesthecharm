@@ -1,5 +1,5 @@
 body {
-  background-color: #CCCCCC;
+  background-color: #808080;
   font-family: Arial, Helvetica, sans-serif;
   color: #0000EE;
   font-weight: bold;
@@ -29,7 +29,7 @@ nav {
   top: 0;
   width: 200px;
   padding: 1rem;
-  background-color: #CCCCCC;
+  background-color: #808080;
 }
 
 nav ul {
@@ -82,7 +82,7 @@ h1 {
 
 .covers {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, 240px);
   gap: 2rem;
   margin: 0;
   padding: 0;
@@ -109,7 +109,7 @@ h1 {
 }
 
 .slideshow {
-  max-width: 105vh;
+  width: min(100%, calc(min(60vh, 100vh - 220px) * 1.5));
 }
 
 .slide {
