@@ -1,10 +1,9 @@
 body {
-  background-color: #CCCCCC;
+  background-color: #808080;
   font-family: Arial, Helvetica, sans-serif;
   color: #0000EE;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: underline;
   margin: 0;
   padding: 0;
   margin-left: 232px;
@@ -29,7 +28,7 @@ nav {
   top: 0;
   width: 200px;
   padding: 1rem;
-  background-color: #CCCCCC;
+  background-color: #808080;
 }
 
 nav ul {
@@ -72,10 +71,10 @@ nav ul {
 
 main {
   padding: 2rem 2rem 4rem 0;
-  max-width: 1100px;
 }
 
 h1 {
+  text-decoration: underline;
   font-size: 1.25rem;
   margin: 0.5rem 0 1.5rem;
 }
@@ -109,7 +108,61 @@ h1 {
 }
 
 .slideshow {
+  flex: none;
   width: min(100%, calc(min(60vh, 100vh - 220px) * 1.5));
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.project-text {
+  flex: 1 1 300px;
+  max-width: 440px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.project-text p {
+  margin: 0 0 1rem;
+}
+
+.dimensions-title {
+  margin-top: 2.5rem !important;
+}
+
+.about-text {
+  max-width: 640px;
+}
+
+.about-text h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.about-text a {
+  font-weight: normal;
+}
+
+.home-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 6rem);
+  object-fit: contain;
+}
+
+.dimensions {
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+}
+
+.dimensions li {
+  margin-bottom: 0.5rem;
 }
 
 .slide {
@@ -138,6 +191,10 @@ h1 {
   cursor: pointer;
 }
 
+#slide-count {
+  text-decoration: underline;
+}
+
 @media (max-width: 700px) {
   main {
     padding: 0.5rem 1.25rem 3rem;
@@ -145,6 +202,10 @@ h1 {
 
   .covers {
     grid-template-columns: 1fr;
+  }
+
+  .project-text {
+    max-width: none;
   }
 
   body {
